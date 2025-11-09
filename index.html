@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>फसल प्रबंधन प्रणाली</title>
+<style>
+  body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background-color: #eaf7ea;
+    color: #033d0b;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #1b5e20;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 { margin:0; font-size:2rem; }
+
+  main { padding: 20px; max-width: 900px; margin:auto; }
+
+  .intro { text-align:center; margin-bottom:30px; }
+
+  .scheme-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .scheme-card {
+    background-color: #c8e6c9;
+    border-left: 6px solid #2e7d32;
+    flex: 1 1 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 20px;
+    text-align: center;
+    /* Adding a subtle shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .scheme-card:hover {
+    background-color: #b9e3ba;
+    /* Lifting effect on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .scheme-card h2 { margin:0; font-size:1.2rem; }
+
+  footer {
+    background-color: #1b5e20;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+  }
+
+  @media (max-width:600px){
+    header h1{font-size:1.5rem;}
+    .scheme-card h2{font-size:1rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🌾 फसल प्रबंधन प्रणाली (Crop Management System)</h1>
+  <p>भारतीय किसानों के लिए सरकारी योजनाओं की जानकारी</p>
+</header>
+
+<main>
+  <section class="intro">
+    <p>
+      इस वेबसाइट का उद्देश्य किसानों को भारत सरकार द्वारा शुरू की गई प्रमुख योजनाओं की जानकारी देना है। 
+      क्लिक करके आप प्रत्येक योजना की विस्तृत जानकारी देख सकते हैं।
+    </p>
+  </section>
+
+  <section class="scheme-grid" id="schemeGrid">
+    <div class="scheme-card" data-url="scheme1.html">
+      <h2>1️⃣ प्रधानमंत्री फसल बीमा योजना (PMFBY)</h2>
+    </div>
+    <div class="scheme-card" data-url="scheme2.html">
+      <h2>2️⃣ पर ड्रॉप मोर क्रॉप योजना</h2>
+    </div>
+    <div class="scheme-card" data-url="scheme3.html">
+      <h2>3️⃣ राष्ट्रीय खाद्य सुरक्षा मिशन (NFSM)</h2>
+    </div>
+    <div class="scheme-card" data-url="scheme4.html">
+      <h2>4️⃣ कृषि यांत्रिकीकरण योजना</h2>
+    </div>
+    <div class="scheme-card" data-url="scheme5.html">
+      <h2>5️⃣ मृदा स्वास्थ्य कार्ड योजना</h2>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>🌱 "किसान देश की रीढ़ हैं, उनका सशक्तिकरण ही राष्ट्र की प्रगति है।"</p>
+  <p>💻 Developed by धनश्री गौरखेडे</p>
+</footer>
+
+<script>
+  // **Option 1: Centralized Click Handling (More efficient for many cards)**
+
+  // Get the main container for the scheme cards
+  const schemeGrid = document.getElementById('schemeGrid');
+
+  // Add an event listener to the grid container
+  schemeGrid.addEventListener('click', function(event) {
+    // Check if the clicked element (or its parent) is a scheme-card
+    let card = event.target.closest('.scheme-card');
+
+    if (card) {
+      // Get the URL from the custom 'data-url' attribute
+      const url = card.getAttribute('data-url');
+      
+      if (url) {
+        // Log a message to the console before navigating
+        console.log(`Navigating to details for: ${card.querySelector('h2').textContent.trim()}`);
+        
+        // Navigate to the specified URL
+        window.location.href = url;
+      }
+    }
+  });
+
+
+  // **Option 2: Alternative using a loop (If you prefer individual listeners)**
+  /*
+  const schemeCards = document.querySelectorAll('.scheme-card');
+
+  schemeCards.forEach(card => {
+    // Get the URL from the custom 'data-url' attribute
+    const url = card.getAttribute('data-url');
+    
+    // Add a click event listener to each card
+    card.addEventListener('click', function() {
+      if (url) {
+        console.log(`Navigating to details for: ${this.querySelector('h2').textContent.trim()}`);
+        window.location.href = url;
+      }
+    });
+  });
+  */
+</script>
+
+</body>
+</html>
