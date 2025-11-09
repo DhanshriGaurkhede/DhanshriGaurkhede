@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>प्रधानमंत्री फसल बीमा योजना</title>
+<style>
+  body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background-color: #eaf7ea;
+    color: #033d0b;
+    margin:0; padding:0;
+  }
+  header {
+    background-color: #1b5e20;
+    color:white;
+    padding:20px; text-align:center;
+  }
+  main {
+    padding:20px;
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+  }
+  .scheme-details {
+    background-color: #c8e6c9;
+    border-radius:12px;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    gap:15px;
+  }
+  .scheme-details h2 { 
+    margin:0; 
+    font-size:1.5rem; 
+    text-align:center; 
+  }
+  .scheme-details p { 
+    font-size:1rem; 
+    line-height:1.6; 
+  }
+  .back-btn {
+    background-color:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:12px;
+    cursor:pointer;
+    width:180px;
+    align-self:center;
+    text-align:center;
+    text-decoration:none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  .back-btn:hover { 
+    background-color:#1b5e20; 
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🌾 प्रधानमंत्री फसल बीमा योजना (PMFBY)</h1>
+</header>
+
+<main>
+  <div class="scheme-details">
+    <h2>योजना का उद्देश्य</h2>
+    <p>
+      यह योजना किसानों को प्राकृतिक आपदाओं, कीट या बीमारियों से होने वाले नुकसान की भरपाई के लिए बीमा प्रदान करती है। 
+      इसका उद्देश्य किसानों को वित्तीय सुरक्षा देना और कृषि को स्थिर बनाना है।
+    </p>
+
+    <h2>लाभ</h2>
+    <p>
+      - वित्तीय सुरक्षा<br>
+      - प्राकृतिक आपदाओं से होने वाले नुकसान की भरपाई<br>
+      - कृषि को स्थिर और सुरक्षित बनाना
+    </p>
+
+    <h2>कैसे लाभ लें</h2>
+    <p>
+      किसान अपने नजदीकी बैंक या बीमा एजेंसी के माध्यम से आवेदन कर सकते हैं। 
+      आवेदन भरने के बाद बीमा पॉलिसी जारी की जाती है।
+    </p>
+
+    <button class="back-btn" onclick="goHome()">🏠 मुख्य पृष्ठ पर वापस जाएं</button>
+  </div>
+</main>
+
+<script>
+  function goHome() {
+    alert("आप मुख्य पृष्ठ पर वापस जा रहे हैं 🌿");
+    window.location.href = "web.html";
+  }
+</script>
+
+</body>
+</html>

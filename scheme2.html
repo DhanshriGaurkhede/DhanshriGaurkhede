@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>पर ड्रॉप मोर क्रॉप योजना</title>
+<style>
+  body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background-color: #eaf7ea;
+    color: #033d0b;
+    margin:0;
+    padding:0;
+  }
+
+  header {
+    background-color: #1b5e20;
+    color:white;
+    padding:20px;
+    text-align:center;
+  }
+
+  main {
+    padding:20px;
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+  }
+
+  .scheme-details {
+    background-color: #c8e6c9;
+    border-radius:12px;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .scheme-details h2 {
+    margin:0;
+    font-size:1.5rem;
+    text-align:center;
+  }
+
+  .scheme-details p {
+    font-size:1rem;
+    line-height:1.6;
+  }
+
+  .back-btn {
+    background-color:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:12px;
+    cursor:pointer;
+    width:200px;
+    align-self:center;
+    text-align:center;
+    text-decoration:none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+
+  .back-btn:hover {
+    background-color:#1b5e20;
+    transform: scale(1.1);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>💧 पर ड्रॉप मोर क्रॉप योजना</h1>
+</header>
+
+<main>
+  <div class="scheme-details">
+    <h2>योजना का उद्देश्य</h2>
+    <p>
+      यह योजना सूक्ष्म सिंचाई तकनीक (ड्रिप और स्प्रिंकलर सिस्टम) को बढ़ावा देती है ताकि पानी की बचत हो और फसल उत्पादन बढ़े। 
+      किसानों को इस तकनीक के लिए अनुदान भी प्रदान किया जाता है।
+    </p>
+
+    <h2>लाभ</h2>
+    <p>
+      - पानी की बचत<br>
+      - फसल उत्पादन में वृद्धि<br>
+      - लागत में कमी
+    </p>
+
+    <h2>कैसे लाभ लें</h2>
+    <p>
+      किसान नजदीकी कृषि विभाग कार्यालय में आवेदन करके ड्रिप या स्प्रिंकलर प्रणाली का लाभ ले सकते हैं।
+    </p>
+
+    <button class="back-btn" onclick="goBack()">🏠 मुख्य पृष्ठ पर वापस जाएं</button>
+  </div>
+</main>
+
+<script>
+  function goBack() {
+    alert("आप मुख्य पृष्ठ पर वापस जा रहे हैं 💧");
+    window.location.href = "web.html";
+  }
+</script>
+
+</body>
+</html>
